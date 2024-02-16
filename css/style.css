@@ -5,11 +5,13 @@
 html{
   font-size: 62.5%; /* 1 rem = 10px */ 
   scroll-behavior: smooth;  /* Animacion mas suave al escroll */
+  overflow: none;
 }
 
 body{
   color:var(--oscuro);
   font-family: var(--fuenteParrafos);
+  overflow: none;
 }
  
 :root{
@@ -311,7 +313,7 @@ strong::selection{
 /*Estilos al footer*/
 #footer{
   width: 100%;
-  height: 15rem;
+  height: 18rem;
   background-color: var(--azul);
   margin-top: 5rem;
 }
