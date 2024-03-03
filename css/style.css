@@ -5,13 +5,11 @@
 html{
   font-size: 62.5%; /* 1 rem = 10px */ 
   scroll-behavior: smooth;  /* Animacion mas suave al escroll */
-  overflow: none;
 }
 
 body{
   color:var(--oscuro);
   font-family: var(--fuenteParrafos);
-  overflow: none;
 }
  
 :root{
@@ -86,44 +84,12 @@ strong::selection{
 
 /* Estilos al contenedor base*/
 .contenedor{
-  width: 70%;
+  max-width: 90rem;
+  width: min(90%, 120rem);
   margin:0 auto;
 }
 
-/*Estilos a el logo*/
-#img-logo{
-  width: 25rem;
-  top: 0;
-  left: 15%;
-  position: absolute;
-	z-index: 222;
-}
-
-@media screen and (max-width:1250px){
-  .contenedor{
-    width: 80%;
-  }  
-  #img-logo{
-    left: 10.2%;
-  }
-}
-
-@media screen and (max-width:620px){
-  .contenedor{
-    width: 95%;
-  }
-  #img-logo{
-    left: 0;
-  }
-}
-
-@media screen and (max-width:450px){
-  .contenedor{
-    width: 100%;
-  } 
-}
-
-/*Estilos Encabezado*/
+/* -- Estilos Encabezado --*/
 
 .header{
   height: 10rem;
@@ -134,9 +100,17 @@ strong::selection{
   height: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: space-between;
 }
 
+/*Estilos a el logo*/
+#img-logo{
+  width: min(25rem, 70%);
+  top: 0;
+  left: 0;
+  position: relative;
+	z-index: 222;
+}
 
 .nav-li,a{
   display: inline;
@@ -155,7 +129,6 @@ strong::selection{
 .nav-ico{
   width: 5rem;
   height: 5rem;
-  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -288,14 +261,18 @@ strong::selection{
 /*responsive al contenedor del titulo*/
 @media screen and (max-width:1100px){
   .cont-title{
-    height: 50rem;
+    height: 55rem;
   }
 }  
 @media screen and (max-width:860px){
   .cont-title{
-    height: 40rem;
+    height: 45rem;
   }
-  
+}
+@media screen and (max-width:460px){
+  .cont-title{
+    height: 35rem;
+  }
 }
 #h1-principal{
   margin-top: 1rem;
